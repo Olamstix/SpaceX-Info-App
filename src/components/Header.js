@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { SiSpacex } from "react-icons/si"
-import Banner from "./Banner"
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +33,9 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="text-white text-sm uppercase tracking-wider"
           >
-            {isOpen ? "Close" : "Menu"}
+            <div className="w-10">
+            {isOpen ? "✖️" : "🍔"}
+            </div>
           </button>
         </div>
       </header>

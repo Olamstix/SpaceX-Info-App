@@ -9,6 +9,9 @@ import { data } from "autoprefixer";
 export default function Capsules() {
   const [capsules, setCapsules] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  // const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 10;
 
   useEffect(() => {
     const fetchCapsules = async () => {
@@ -19,6 +22,23 @@ export default function Capsules() {
 
     fetchCapsules();
   }, []);
+
+  // // Function to load more cards
+  // const loadMore = () => {
+  //   setCurrentPage(currentPage + 1);
+  // };
+
+  // // Calculate the index range for the current page
+  // const startIndex = (currentPage - 1) * 10;
+  // const endIndex = startIndex + 10;
+
+    const paginate = (page) => {
+    setCurrentPage(page);
+  };
+
+  const totalPages = Math.ceil(capsules.length / cardsPerPage);
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
 
 
   return (
@@ -36,6 +56,7 @@ export default function Capsules() {
                 capsule?.status.toLowerCase().includes(inputValue.toLowerCase()) || capsule?.type.toLowerCase().includes(inputValue.toLowerCase()) ||
                 capsule?.serial.toLowerCase().includes(inputValue.toLowerCase())
               )
+              .slice(startIndex, endIndex) // Display only 10 cards per page
               .map(
                 ({
                   id,
@@ -78,8 +99,36 @@ export default function Capsules() {
                 )
               )}
           </div>
+                    {/* <div className="text-center mt-5">
+            {endIndex < capsules.length && (
+              <button
+                className="bg-blue-500 text-white py-2 px-4 rounded-md"
+                onClick={loadMore}
+              >
+                Load More
+              </button>
+            )}
+          </div> */}
+                   <div className="text-center mt-20">
+            {totalPages > 1 &&
+              Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index + 1}
+                  className={`${
+                    index + 1 === currentPage
+                      ? "bg-gray-400 text-black mr-5"
+                      : "bg-gray-200 text-black-700 mr-5"
+                  } py-2 px-4 rounded-md mx-2 bg-gray-400 `}
+                  onClick={() => paginate(index + 1)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+          </div>
         </section>
       )}
     </>
   );
 }
+
+
