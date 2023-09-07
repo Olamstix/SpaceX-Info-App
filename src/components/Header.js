@@ -11,7 +11,7 @@ export default function Header() {
       <header className="absolute flex items-center justify-between w-full">
         <div>
           <Link to="/">
-            <SiSpacex className="text-8xl text-white ml-10" />
+            <SiSpacex className="text-7xl text-white ml-10" />
           </Link>
         </div>
         <nav className= {`${isOpen ? "open" : ""}`}>
@@ -33,7 +33,7 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="text-white text-sm uppercase tracking-wider"
           >
-            <div className="w-10">
+            <div className="w-10 text-2xl mr-5 mt-2">
             {isOpen ? "✖️" : "🍔"}
             </div>
           </button>

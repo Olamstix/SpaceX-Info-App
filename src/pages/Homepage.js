@@ -27,7 +27,7 @@ export default function Homepage() {
               </h1>
               <p className="max-w-3xl mx-auto text-center mt-10">
                 {company.summary} <br></br><br></br><br></br><br></br>
-                By <span className="text-lg">Olamide</span>
+                By <span className="text-lg">Olamide</span> with ❤️
               </p>
             </article>
             <div>

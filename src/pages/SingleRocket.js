@@ -22,7 +22,7 @@ export default function SingleRocket() {
       {!singleRocket ? (
         <Loading />
       ) : (
-        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2">
+        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2 pl-5">
           <article>
             <h1 className="heading">{singleRocket.name}</h1>
 
