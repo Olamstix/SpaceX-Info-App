@@ -30,12 +30,9 @@ export default function Homepage() {
                 By <span className="text-lg">Olamide</span> with ❤️
               </p>
             </article>
-            <div>
-              <p>By <span>Olamide</span></p>
-            </div>
           </div>
         </section>
       )}
-    </>
+    </>Remove none-useful text in Home and add live app link
   )
 }
