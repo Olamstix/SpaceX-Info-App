@@ -33,6 +33,6 @@ export default function Homepage() {
           </div>
         </section>
       )}
-    </>Remove none-useful text in Home and add live app link
+    </>
   )
 }
