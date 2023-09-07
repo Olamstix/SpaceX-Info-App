@@ -19,6 +19,10 @@ This project is a web application that provides information about capsules and r
 
 - The READ MORE button enables you to see more details of the rocket when you click.
 
+## Demo Video URL
+
+- https://www.awesomescreenshot.com/video/20562607?key=1ac3cd46ea81cd19dea9c3762d7bd193
+
 ## Link to App
 
 - https://olamide-frontend-developer.vercel.app/
