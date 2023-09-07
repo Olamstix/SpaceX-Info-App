@@ -21,7 +21,7 @@ This project is a web application that provides information about capsules and r
 
 ## Link to App
 
-- <a href="" target="_blank">
+- <a href="https://olamide-frontend-developer.vercel.app/" target="_blank">
 
 
 ## How to tweak this project for your own use

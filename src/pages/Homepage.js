@@ -30,9 +30,6 @@ export default function Homepage() {
                 By <span className="text-lg">Olamide</span> with ❤️
               </p>
             </article>
-            <div>
-              <p>By <span>Olamide</span></p>
-            </div>
           </div>
         </section>
       )}
