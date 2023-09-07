@@ -23,15 +23,6 @@ export default function Capsules() {
     fetchCapsules();
   }, []);
 
-  // // Function to load more cards
-  // const loadMore = () => {
-  //   setCurrentPage(currentPage + 1);
-  // };
-
-  // // Calculate the index range for the current page
-  // const startIndex = (currentPage - 1) * 10;
-  // const endIndex = startIndex + 10;
-
     const paginate = (page) => {
     setCurrentPage(page);
   };
@@ -71,7 +62,7 @@ export default function Capsules() {
                   <div>
                   <Link to={`/capsules/${id}`} key={id}>
                   <article key={id} className="articles" >
-                    <h2 className="text-xl font-bold mb-5">
+                    <h2 className="text-xl font-bold mb-5 ">
                       {type}, 
                       <span className="text-base opacity-75 font-light">
                         {serial}
@@ -91,7 +82,6 @@ export default function Capsules() {
                     </ul>
                     <p className="mt-5 opacity-75">{last_update}</p>
                       <Link to={`/capsules/${id}`} >
-                      {/* Read More &rarr; */}
                     </Link>
                   </article>
                   </Link>
@@ -99,16 +89,6 @@ export default function Capsules() {
                 )
               )}
           </div>
-                    {/* <div className="text-center mt-5">
-            {endIndex < capsules.length && (
-              <button
-                className="bg-blue-500 text-white py-2 px-4 rounded-md"
-                onClick={loadMore}
-              >
-                Load More
-              </button>
-            )}
-          </div> */}
                    <div className="text-center mt-20">
             {totalPages > 1 &&
               Array.from({ length: totalPages }, (_, index) => (

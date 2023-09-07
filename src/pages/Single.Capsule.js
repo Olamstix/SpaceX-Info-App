@@ -21,10 +21,9 @@ export default function SingleCapsule() {
       {!singleCapsule ? (
         <Loading />
       ) : (
-        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2">
-          {/* {singleCapsule.map(({status}) => ( */}
+        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2 pl-5">
           <article>
-            <h1 className="heading mt-50">{singleCapsule.type}</h1>
+            <h1 className="heading mt-50 ">{singleCapsule.type}</h1>
             <h2 className="capitalize text-3xl opacity-75 mt-2 text-white font-bold">
               Serial: {singleCapsule.serial}
             </h2>
